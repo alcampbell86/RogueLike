@@ -1,0 +1,32 @@
+<html>
+<head>
+
+	<!-- 
+		Imports
+	-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./dungeon.js"></script>
+	<script type="text/javascript" src="./actions.js"></script>
+	<script type="text/javascript" src="./render.js"></script>
+	<script type="text/javascript" src="./pathFind.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			Dungeon.Generate();
+			Renderer.Initialize();
+			Renderer.DrawMap(Dungeon.map);
+		});
+	</script>
+</head>
+
+<body>
+	<canvas id="canvas"></canvas>
+	<br />
+	<span style="background-color: black;">&nbsp;&nbsp;&nbsp;</div> <span style="background-color:white;">&nbsp;Hero</span><br />
+	<span style="background-color: blue;">&nbsp;&nbsp;&nbsp;</div> <span style="background-color:white;">&nbsp;Exit</span><br />
+	<span style="background-color: #424254;">&nbsp;&nbsp;&nbsp;</div> <span style="background-color:white;">&nbsp;Wall</span><br />
+	<span style="background-color: #351330;">&nbsp;&nbsp;&nbsp;</div> <span style="background-color:white;">&nbsp;Void</span><br />
+	
+	<div style="background-color: white;">Movement: WASD</div>
+</body>
+</html>
